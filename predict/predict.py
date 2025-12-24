@@ -69,6 +69,6 @@ if __name__ == "__main__":
     try:
         is_default, prob = predict(applicant_data)
         print(f"\nDefault Probability: {prob:.2%}")
-        print(f"Decision: {'REJECT (High Risk)' if is_default == 1 else 'APPROVE (Low Risk)\n'}")
+        print(f"Decision: {'REJECT (High Risk)' if is_default == 1 else 'APPROVE (Low Risk)'}")
     except Exception as e:
         print(f"\nError: {e}")

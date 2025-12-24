@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+*.egg-info
+
+# Virtual environments
+venv
+.venv
+env
+
+# IDE
+.vscode
+.idea
+
+# Notebooks
+notebooks
+
+# Tests (not needed in production)
+tests
+
+# Data files (raw data not needed, model artifacts ARE needed)
+data
+
+# Misc
+*.md
+*.log
+.DS_Store
