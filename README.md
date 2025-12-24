@@ -71,5 +71,4 @@ py -m pytest tests/ -v
 # Credit-Risk-API
 
 ### Live Demo
-**API URL:** [https://credit-risk-api-6rm8.onrender.com](https://credit-risk-api-6rm8.onrender.com)
-**Documentation:** [https://credit-risk-api-6rm8.onrender.com/docs](https://credit-risk-api-6rm8.onrender.com/docs)
+**API URL:** https://credit-risk-ztak.onrender.com
