@@ -67,3 +67,9 @@ py -m pytest tests/ -v
 - **Time-based split**: Train on older loans, test on newer ones. This mirrors real-world usage and avoids data leakage.
 - **Custom transformers**: All preprocessing is sklearn-compatible and gets saved with the model, so inference matches training exactly.
 - **Class weighting**: Defaults are rare (~20%), so the model is weighted to pay more attention to them.
+
+# Credit-Risk-API
+
+### Live Demo
+**API URL:** [https://credit-risk-api-6rm8.onrender.com](https://credit-risk-api-6rm8.onrender.com)
+**Documentation:** [https://credit-risk-api-6rm8.onrender.com/docs](https://credit-risk-api-6rm8.onrender.com/docs)
