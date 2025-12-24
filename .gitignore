@@ -23,9 +23,6 @@ htmlcov/
 data/
 *.csv
 
-# Models (too large for git)
-models/*.pkl
-
 # OS
 .DS_Store
 Thumbs.db
