@@ -21,7 +21,6 @@ htmlcov/
 
 # Data (too large for git)
 data/
-*.csv
 
 # OS
 .DS_Store
