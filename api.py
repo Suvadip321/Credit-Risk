@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 import uvicorn
 from predict.predict import predict
@@ -9,7 +10,7 @@ app = FastAPI(title="Credit Risk Predictor", version="1.0")
 class Applicant(BaseModel):
     loan_amnt: float
     term: str
-    installment: float               
+    installment: float              
     purpose: str
     issue_d: str             
     emp_length: str
@@ -33,13 +34,17 @@ class Applicant(BaseModel):
     pub_rec_bankruptcies: float
     mths_since_last_delinq: float # Added (Use 999.0 if none)
 
+# NEW ROOT ENDPOINT
+@app.get("/")
+def read_root():
+    return RedirectResponse(url="/docs")
+
 # Define the Endpoint
 @app.post("/predict_risk")
 def get_prediction(applicant: Applicant):
     try:
         # Convert Pydantic object to dictionary
         data_dict = applicant.model_dump()
-        
         # Call backend
         prediction_class, probability = predict(data_dict)
         
