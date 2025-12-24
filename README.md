@@ -18,23 +18,38 @@ The pipeline does three things:
 
 ## Running It
 
-Install dependencies:
+### Option 1: Using Docker (Recommended)
+
 ```bash
-pip install -r requirements.txt
+# Clone the repo
+git clone https://github.com/Suvadip321/Credit-Risk.git
+cd Credit-Risk
+
+# Build the Docker image
+docker build -t credit-risk-api .
+
+# Run the container
+docker run -p 8000:8000 credit-risk-api
 ```
 
-Train the model:
+The API will be available at `http://localhost:8000`
+
+### Option 2: Local Development
+
 ```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Train the model (if not already trained)
 cd src
 python train_model.py
-```
 
-Start the API:
-```bash
+# Start the API
 uvicorn api:app --reload
 ```
 
-Make a prediction:
+### Test the API
+
 ```bash
 curl -X POST "http://localhost:8000/predict_risk" \
   -H "Content-Type: application/json" \
